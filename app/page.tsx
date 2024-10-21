@@ -5,7 +5,7 @@ export default function HomePage() {
     <Container>
       <Space h="md" />
       <Box>
-          <Button variant="filled">Button abd</Button>
+          <Button variant="filled">Button</Button>
       </Box>
     </Container>
   ); 
