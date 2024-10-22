@@ -5,7 +5,7 @@ export default function HomePage() {
     <Container>
       <Space h="md" />
       <Box>
-          <Button variant="filled">Button</Button>
+          <Button href="/login" component="a" variant="filled">Login</Button>
       </Box>
     </Container>
   ); 
