@@ -10,14 +10,18 @@ import {
   Center,
   Box,
   rem,
-} from '@mantine/core';
-import { ArrowLeft } from 'lucide-react';
-import classes from '../styles.module.scss';
+} from "@mantine/core";
+import { ArrowLeft } from "lucide-react";
+import classes from "../app.module.scss";
 
 export default function ForgotPassword() {
   return (
-    <Container fluid bg="var(--mantine-color-gray-0)" className={classes.fullheight} >
-        <Container size={460} pt={120} pb={120}>
+    <Container
+      fluid
+      bg="var(--mantine-color-gray-0)"
+      className={classes.fullheight}
+    >
+      <Container size={460} pt={120} pb={120}>
         <Title size="h2" ta="center">
           Forgot your password?
         </Title>
@@ -26,9 +30,18 @@ export default function ForgotPassword() {
         </Text>
 
         <Paper withBorder shadow="md" p={30} radius="md" mt="xl">
-          <TextInput label="Your email" placeholder="me@likepion.com" required />
+          <TextInput
+            label="Your email"
+            placeholder="me@likepion.com"
+            required
+          />
           <Group justify="space-between" mt="lg" className={classes.controls}>
-            <Anchor href="/login" c="dimmed" size="sm" className={classes.control}>
+            <Anchor
+              href="/login"
+              c="dimmed"
+              size="sm"
+              className={classes.control}
+            >
               <Center inline>
                 <ArrowLeft style={{ width: rem(12), height: rem(12) }} />
                 <Box ml={5}>Back to the login page</Box>
@@ -39,6 +52,5 @@ export default function ForgotPassword() {
         </Paper>
       </Container>
     </Container>
-      
   );
 }
