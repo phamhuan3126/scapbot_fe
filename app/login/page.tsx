@@ -11,6 +11,7 @@ import {
   Button,
 } from "@mantine/core";
 import classes from "../app.module.scss";
+import Link from "next/link";
 export default function AuthenticationLogin() {
   return (
     <Container
@@ -22,7 +23,7 @@ export default function AuthenticationLogin() {
         <Title ta="center">Welcome back</Title>
         <Text c="dimmed" size="sm" ta="center" mt={5}>
           Do not have an account yet?{" "}
-          <Anchor href="/signup" size="sm">
+          <Anchor component={Link} href="/signup" size="sm">
             Create account
           </Anchor>
         </Text>
@@ -37,7 +38,7 @@ export default function AuthenticationLogin() {
           />
           <Group justify="space-between" mt="lg">
             <Checkbox label="Remember me" />
-            <Anchor href="/forgotpassword" size="sm">
+            <Anchor component={Link} href="/forgotpassword" size="sm">
               Forgot password?
             </Anchor>
           </Group>

@@ -9,6 +9,7 @@ import {
   Button,
 } from "@mantine/core";
 import classes from "../app.module.scss";
+import Link from "next/link";
 
 export default function AuthenticationSignup() {
   return (
@@ -21,7 +22,7 @@ export default function AuthenticationSignup() {
         <Title ta="center">Sign up</Title>
         <Text c="dimmed" size="sm" ta="center" mt={5}>
           Already have an account?{" "}
-          <Anchor href="/login" size="sm">
+          <Anchor component={Link} href="/login" size="sm">
             Login Now
           </Anchor>
         </Text>

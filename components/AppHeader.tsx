@@ -30,7 +30,7 @@ export default function AppHeader() {
     <header className={classes.header}>
       <div className={classes.inner}>
         <Group>
-          <Anchor href="/">
+          <Anchor component={Link} href="/">
             <Image
               component={NextImage}
               src={Logo}

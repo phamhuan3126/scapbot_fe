@@ -12,6 +12,7 @@ import {
   rem,
 } from "@mantine/core";
 import { ArrowLeft } from "lucide-react";
+import Link from "next/link";
 import classes from "../app.module.scss";
 
 export default function ForgotPassword() {
@@ -36,7 +37,7 @@ export default function ForgotPassword() {
             required
           />
           <Group justify="space-between" mt="lg" className={classes.controls}>
-            <Anchor
+            <Anchor component={Link}
               href="/login"
               c="dimmed"
               size="sm"
