@@ -5,8 +5,8 @@ import { theme } from "../theme";
 import AppHeader from "../components/AppHeader";
 
 export const metadata = {
-  title: "Mantine Next.js template",
-  description: "I am using Mantine with Next.js!",
+  title: "LikePion - Save Your Time",
+  description: "Great SEO Tools for You",
 };
 
 export default function RootLayout({ children }: { children: any }) {
