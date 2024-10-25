@@ -42,7 +42,7 @@ export default function AuthenticationSignup() {
           />
           <Text size="sm" mt="md">
             By continuing, you agree to our{" "}
-            <Anchor href="/" size="sm">
+            <Anchor component={Link} href="/" size="sm">
               terms of service
             </Anchor>
           </Text>
