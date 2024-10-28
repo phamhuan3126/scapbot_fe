@@ -1,3 +1,4 @@
+"use client";
 import {
   TextInput,
   PasswordInput,
@@ -8,7 +9,7 @@ import {
   Container,
   Button,
 } from "@mantine/core";
-import classes from "../app.module.scss";
+import classes from "../app.module.css";
 import Link from "next/link";
 
 export default function AuthenticationSignup() {

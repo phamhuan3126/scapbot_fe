@@ -1,3 +1,4 @@
+"use client";
 import {
   Paper,
   Title,
@@ -13,7 +14,7 @@ import {
 } from "@mantine/core";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
-import classes from "../app.module.scss";
+import classes from "../app.module.css";
 
 export default function ForgotPassword() {
   return (

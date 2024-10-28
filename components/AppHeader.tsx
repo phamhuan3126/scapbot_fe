@@ -11,7 +11,7 @@ import {
   Drawer,
   Space,
 } from "@mantine/core";
-import classes from "./components.module.scss";
+import classes from "./components.module.css";
 import { useDisclosure } from "@mantine/hooks";
 import NextImage from "next/image";
 import Link from "next/link";
@@ -32,8 +32,8 @@ export default function AppHeader() {
       href={link.link}
       className={classes.link}
       onClick={(event) => {
-        event.preventDefault(); // Ngăn chuyển trang khi bấm (tạm thời)
-        close(); // Đóng Drawer
+        event.preventDefault();
+        close();
       }}
     >
       {link.label}

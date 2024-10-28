@@ -13,7 +13,6 @@ export default function RootLayout({ children }: { children: any }) {
   return (
     <html lang="en">
       <head>
-        <ColorSchemeScript />
         <link rel="shortcut icon" href="/favicon-likepion.svg" />
         <meta
           name="viewport"
