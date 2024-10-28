@@ -22,7 +22,7 @@ export default function ForgotPassword() {
       bg="var(--mantine-color-gray-0)"
       className={classes.fullheight}
     >
-      <Container size={460} pt={120} pb={120}>
+      <Container size={460} pt={60} pb={60}>
         <Title size="h2" ta="center">
           Forgot your password?
         </Title>

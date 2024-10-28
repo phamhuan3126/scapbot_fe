@@ -19,7 +19,7 @@ export default function AuthenticationLogin() {
       bg="var(--mantine-color-gray-0)"
       className={classes.fullheight}
     >
-      <Container size={440} pt={120} pb={120}>
+      <Container size={440} pt={60} pb={60}>
         <Title ta="center">Welcome back</Title>
         <Text c="dimmed" size="sm" ta="center" mt={5}>
           Do not have an account yet?{" "}
@@ -29,13 +29,15 @@ export default function AuthenticationLogin() {
         </Text>
 
         <Paper withBorder shadow="md" p={30} mt={30} radius="md">
-          <TextInput label="Email" placeholder="you@mantine.dev" required />
-          <PasswordInput
-            label="Password"
-            placeholder="Your password"
-            required
-            mt="md"
-          />
+          <form>
+            <TextInput label="Email" placeholder="you@likepion.com" required />
+            <PasswordInput
+              label="Password"
+              placeholder="Your password"
+              required
+              mt="md"
+            />
+          </form>
           <Group justify="space-between" mt="lg">
             <Checkbox label="Remember me" />
             <Anchor component={Link} href="/forgotpassword" size="sm">
