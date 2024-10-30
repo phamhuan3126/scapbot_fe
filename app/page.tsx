@@ -57,7 +57,7 @@ export default function HomePage() {
 
           <Text size="sm" c="dimmed">
             Next generation backlink generator. Build high quality link profile
-            for your website. No captcha, no proxy, no server...It's so easy
+            for your website. No captcha, no proxy, no server...It&apos;s so easy
           </Text>
 
           <Button color="blue" fullWidth mt="md" radius="md">
@@ -86,7 +86,7 @@ export default function HomePage() {
 
           <Text size="sm" c="dimmed">
             Automated social posting for any website. Get social signals to gain
-            ranking advantage today. No setup required...It's amazing
+            ranking advantage today. No setup required...It&apos;s amazing
           </Text>
 
           <Button disabled color="blue" fullWidth mt="md" radius="md">
