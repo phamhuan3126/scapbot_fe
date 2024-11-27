@@ -108,7 +108,7 @@ export default function HomePage() {
 
           <Group justify="space-between" mt="md" mb="xs">
             <Text fw={700} size="xl">
-              Indexed
+              Index
             </Text>
             <Badge color="yellow">Maintenance</Badge>
           </Group>

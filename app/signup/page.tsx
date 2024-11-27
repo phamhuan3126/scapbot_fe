@@ -11,8 +11,31 @@ import {
 } from "@mantine/core";
 import classes from "../app.module.css";
 import Link from "next/link";
+import { useForm } from "@mantine/form";
+import { zodResolver } from "mantine-form-zod-resolver";
+import { signupSchema } from "../../schema/auth";
 
 export default function AuthenticationSignup() {
+  const form = useForm({
+    mode: "uncontrolled",
+    initialValues: {
+      username: "",
+      email: "",
+      password: "",
+    },
+    validate: zodResolver(signupSchema),
+  });
+  const handleSubmit = (values: any) => {
+    // Validate form trước khi xử lý
+    const validationResult = form.validate();
+    
+    // Nếu form không hợp lệ, dừng xử lý
+    if (!validationResult.hasErrors) {
+      // Xử lý logic đăng ký
+      console.log(values);
+    }
+  };
+
   return (
     <Container
       fluid
@@ -28,30 +51,34 @@ export default function AuthenticationSignup() {
           </Anchor>
         </Text>
         <Paper withBorder shadow="md" p={30} mt={30} radius="md">
-          <form>
-            <TextInput label="Username" placeholder="username" />
+          <form onSubmit={form.onSubmit(handleSubmit)}>
+            <TextInput
+              label="Username"
+              placeholder="username"
+              {...form.getInputProps("username")}
+            />
             <TextInput
               label="Email"
               placeholder="you@likepion.com"
-              required
               mt="md"
+              {...form.getInputProps("email")}
             />
             <PasswordInput
               label="Password"
               placeholder="Your password"
-              required
               mt="md"
+              {...form.getInputProps("password")}
             />
+            <Text size="sm" mt="md">
+              By continuing, you agree to our{" "}
+              <Anchor component={Link} href="/" size="sm">
+                terms of service
+              </Anchor>
+            </Text>
+            <Button fullWidth mt="xl" type="submit">
+              Sign up
+            </Button>
           </form>
-          <Text size="sm" mt="md">
-            By continuing, you agree to our{" "}
-            <Anchor component={Link} href="/" size="sm">
-              terms of service
-            </Anchor>
-          </Text>
-          <Button fullWidth mt="xl">
-            Sign up
-          </Button>
         </Paper>
       </Container>
     </Container>
