@@ -66,13 +66,13 @@ export default function AuthenticationSignup() {
           switch (serverError.statusCode) {
             case 409: // Conflict
               const conflictField = serverError.field;
-              if (conflictField === "email") {
-                form.setErrors({
-                  email: "The email has already been registered.",
-                });
-              } else if (conflictField === "username") {
+              if (conflictField === "username") {
                 form.setErrors({
                   username: "The username already exists.",
+                });
+              } else if (conflictField === "email") {
+                form.setErrors({
+                  email: "The email has already been registered.",
                 });
               } else {
                 notifications.show({
