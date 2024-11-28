@@ -1,8 +1,10 @@
 import "@mantine/core/styles.css";
+import "@mantine/notifications/styles.css";
 import React from "react";
 import { MantineProvider, ColorSchemeScript } from "@mantine/core";
 import { theme } from "../theme";
 import AppHeader from "../components/AppHeader";
+import { Notifications } from "@mantine/notifications";
 
 export const metadata = {
   title: "LikePion - Save Your Time",
@@ -21,6 +23,7 @@ export default function RootLayout({ children }: { children: any }) {
       </head>
       <body>
         <MantineProvider theme={theme}>
+          <Notifications />
           <AppHeader />
           {children}
         </MantineProvider>

@@ -14,8 +14,11 @@ import Link from "next/link";
 import { useForm } from "@mantine/form";
 import { zodResolver } from "mantine-form-zod-resolver";
 import { signupSchema } from "../../schema/auth";
+import { useRouter } from 'next/navigation';
+import { notifications } from '@mantine/notifications';
 
 export default function AuthenticationSignup() {
+  const router = useRouter();
   const form = useForm({
     mode: "uncontrolled",
     initialValues: {
@@ -25,14 +28,24 @@ export default function AuthenticationSignup() {
     },
     validate: zodResolver(signupSchema),
   });
-  const handleSubmit = (values: any) => {
+  const handleSubmit = async (values: any) => {
+    
     // Validate form trước khi xử lý
     const validationResult = form.validate();
     
     // Nếu form không hợp lệ, dừng xử lý
     if (!validationResult.hasErrors) {
-      // Xử lý logic đăng ký
-      console.log(values);
+      
+      const submitButton = document.querySelector('button[type="submit"]');
+      if (submitButton) (submitButton as HTMLButtonElement).disabled = true;
+
+      notifications.show({
+        title: 'Đăng ký thành công',
+        message: 'Tài khoản của bạn đã được tạo',
+        color: 'green'
+      });
+
+      router.push('/login');
     }
   };
 
